@@ -1,0 +1,15 @@
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\TradingBusiness.deps.json
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\TradingBusiness.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\ref\TradingBusiness.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\TradingBusiness.pdb
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\TradingData.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\bin\Debug\net5.0\TradingData.pdb
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.csproj.AssemblyReference.cache
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.AssemblyInfoInputs.cache
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.AssemblyInfo.cs
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.csproj.CoreCompileInputs.cache
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.csproj.CopyComplete
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\ref\TradingBusiness.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingBusiness\obj\Debug\net5.0\TradingBusiness.pdb

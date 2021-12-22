@@ -1,0 +1,12 @@
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\bin\Debug\net5.0\TradingData.deps.json
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\bin\Debug\net5.0\TradingData.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\bin\Debug\net5.0\ref\TradingData.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\bin\Debug\net5.0\TradingData.pdb
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.AssemblyInfoInputs.cache
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.AssemblyInfo.cs
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.csproj.CoreCompileInputs.cache
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\ref\TradingData.dll
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.pdb
+C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.csproj.AssemblyReference.cache
