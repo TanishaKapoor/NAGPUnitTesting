@@ -32,19 +32,19 @@ namespace TradingApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddScoped<IEquityHandler, EquityHandler>();
-            //services.AddScoped<IFundHandler, FundHandler>();
+            services.AddScoped<IEquityHandler, EquityHandler>();
+            services.AddScoped<IFundHandler, FundHandler>();
             services.AddControllers();
 
-            //services.AddScoped<IEquityRepository, EquityRepository>();
-            //services.AddScoped<IOrderRepository, OrderRepository>();
-            //services.AddScoped<IUserRepository, UserRepository>();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TradingApp", Version = "v1" });
-            //});
-           // services.AddDbContext<TraderDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddScoped<TraderDbContext>();
+            services.AddScoped<IEquityRepository, EquityRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TradingApp", Version = "v1" });
+            });
+            services.AddDbContext<TraderDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<TraderDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,8 +53,8 @@ namespace TradingApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseSwagger();
-                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TradingApp v1"));
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TradingApp v1"));
             }
 
             app.UseHttpsRedirection();

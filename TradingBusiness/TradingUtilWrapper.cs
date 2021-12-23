@@ -23,9 +23,9 @@ namespace TradingBusiness
             return Util.IsTradingOpen();
         }
 
-        public bool UserHasEnoughFunds(int userId, double requiredFundsForTrading)
+        public bool UserHasEnoughFunds(double funds, double requiredFundsForTrading)
         {
-            return Util.UserHasEnoughFunds(userId, requiredFundsForTrading);
+            return Util.UserHasEnoughFunds(funds, requiredFundsForTrading);
         }
     }
 }

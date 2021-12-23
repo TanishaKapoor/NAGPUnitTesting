@@ -10,7 +10,7 @@ namespace TradingBusiness
     public interface ITradingUtilWrapper
     {
         double CalculateBrokerage(Equity equity, int quantity);
-        bool UserHasEnoughFunds(int userId, double requiredFundsForTrading);
+        bool UserHasEnoughFunds(double funds, double requiredFundsForTrading);
         bool IsTradingOpen();
     }
 }

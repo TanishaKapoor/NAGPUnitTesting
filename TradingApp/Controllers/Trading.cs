@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TradingApp.Models;
 using TradingBusiness.Contracts;
 using TradingData.Models;
 
@@ -26,15 +28,56 @@ namespace TradingApp.Controllers
 
         [HttpGet]
         [Route("buy")]
-        public List<Orders> BuySellEquity(string userName,string equityName,int quantity)
+        public TradingResponse BuySellEquity(string userName,string equityName,int quantity)
         {
-            return _equityHandler.BuySellEquity(userName, equityName, quantity);
+            TradingResponse response = new TradingResponse();
+            try
+            {
+                List<Orders>orders = _equityHandler.BuySellEquity(userName, equityName, quantity);
+                if (orders.Count > 0)
+                {
+                    response.Status = Constants.Successful;
+
+                }
+                else
+                {
+                    response.Status = Constants.UnSuccessful;
+                    response.ErrorMessage = Constants.ErrorMessage;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Status = Constants.UnSuccessful;
+                response.ErrorMessage = ex.Message;
+            }
+            return response;
         }
 
         [HttpGet]
-        public double AddFunds(string userName, double funds)
+        [Route("addFunds")]
+        public TradingResponse AddFunds(string userName, double funds)
         {
-            return _fundsHandler.AddFunds(userName, funds);
+            TradingResponse response = new TradingResponse();
+            try
+            {
+                var fundsAdded = _fundsHandler.AddFunds(userName, funds);
+                if (fundsAdded > 0)
+                {
+                    response.Status = Constants.Successful;
+
+                }
+                else
+                {
+                    response.Status = Constants.UnSuccessful;
+                    response.ErrorMessage = Constants.ErrorMessage;
+                }
+            }
+            catch(Exception ex)
+            {
+                response.Status = Constants.UnSuccessful;
+                response.ErrorMessage = ex.Message;
+            }
+            return response;
         }
     }
 }

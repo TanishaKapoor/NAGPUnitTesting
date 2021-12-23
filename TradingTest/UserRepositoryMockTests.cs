@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,17 @@ namespace TradingTest
         }
 
         [Fact]
+        public void ShouldGetNullIfUserNotExistsInDataBase()
+        {
+            using (var context = new TraderDbContext(this.fixture.option))
+            {
+                UserRepository repo = new UserRepository(context);
+                var users = repo.GetUserById(10);
+                Assert.True(users==null);
+            }
+        }
+
+        [Fact]
         public void ShouldAddFundsToUser()
         {
             using (var context = new TraderDbContext(this.fixture.option))
@@ -65,6 +77,17 @@ namespace TradingTest
                 var funds = repo.WithDrawFunds(1,20);
                 repo.AddFunds(1, 20);
                 Assert.Equal(9980, funds);
+            }
+        }
+
+        [Fact]
+        public void ShouldCallDisposeMethodUserRepo()
+        {
+            using (var context = new TraderDbContext(this.fixture.option))
+            {
+                UserRepository repo = new UserRepository(context);
+                repo.Dispose();
+                Mock.VerifyAll();
             }
         }
     }
@@ -107,7 +130,8 @@ namespace TradingTest
 
         public void Dispose()
         {
-            // ... clean up test data from the database ...
+            GC.SuppressFinalize(this);
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace TradingTest
         }
 
         [Fact]
-        public void ShouldReturnZeroIfnoOrderF0rUsers()
+        public void ShouldReturnZeroIfnoOrderForUsers()
         {
             using (var context = new TraderDbContext(this.fixture.option))
             {
@@ -85,6 +86,17 @@ namespace TradingTest
                 Assert.Equal(10, context.Orders.First().QuantityPurchased);
             }
         }
+
+        [Fact]
+        public void ShouldCallDisposeMethodOrderRepo()
+        {
+            using (var context = new TraderDbContext(this.fixture.option))
+            {
+                OrderRepository repo = new OrderRepository(context);
+                repo.Dispose();
+                Mock.VerifyAll();
+            }
+        }
     }
 
     public class OrderDatabaseFixture : IDisposable
@@ -125,7 +137,9 @@ namespace TradingTest
 
         public void Dispose()
         {
-            // ... clean up test data from the database ...
+            GC.SuppressFinalize(this);
         }
+
+
     }
 }

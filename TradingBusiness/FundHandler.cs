@@ -22,7 +22,6 @@ namespace TradingBusiness
             var addFundAmountPostCharges = amount - addFundCharges;
             var user = _userRepository.GetUsers().Where(c => c.UserName == userName).FirstOrDefault();
            var fundAvailable = _userRepository.AddFunds(user.UserId, addFundAmountPostCharges);
-           
             return fundAvailable;
         }
         
@@ -36,7 +35,7 @@ namespace TradingBusiness
             }
             else
             {
-                throw new Exception($"Insufficient fund for withdraw");
+                throw new InsufficientFundsException(amount);
             }
         }
         

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TradingData.Models;
+using TradingData.Repository;
 
 namespace TradingBusiness
 {
@@ -11,23 +12,24 @@ namespace TradingBusiness
     {
         public static double CalculateBrokerage(Equity equity, int quantity)
         {
-            return Math.Max((equity.SellPrice * quantity) * 0.0005, 20);
+            return Math.Max((equity.SellPrice * quantity) * 0.05, 20);
         }
 
-        public static bool UserHasEnoughFunds(int userId, double requiredFundsForTrading)
+        public static bool UserHasEnoughFunds(double availableFunds, double requiredFundsForTrading)
         {
-            double availableFunds = 0;
             return availableFunds > requiredFundsForTrading;
         }
 
         public static bool IsTradingOpen()
         {
+            TimeSpan start = new TimeSpan(9, 0, 0); //10 o'clock
+            TimeSpan end = new TimeSpan(15, 0, 0); //12 o'clock
             var currTime = DateTime.UtcNow;
             if (currTime.DayOfWeek != DayOfWeek.Saturday && currTime.DayOfWeek != DayOfWeek.Sunday)
             {
-                return currTime.Hour >= 9 && currTime.Hour <= 3;
+                return ((currTime.TimeOfDay > start) && (currTime.TimeOfDay < end));
             }
-
+            
             return false;
         }
     }

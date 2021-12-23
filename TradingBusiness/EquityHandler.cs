@@ -72,7 +72,7 @@ namespace TradingBusiness
                 }
                 else
                 {
-                    if (_wrapper.UserHasEnoughFunds(user.UserId, equity.BuyPrice * quantity))
+                    if (_wrapper.UserHasEnoughFunds(user.FundsAvailable, equity.BuyPrice * quantity))
                     {
                         // add order to order db
                         var existingOrder = orders.Where(c => c.EquityId == equity.Id).FirstOrDefault();

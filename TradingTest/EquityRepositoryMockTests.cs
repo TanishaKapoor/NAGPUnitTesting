@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,29 @@ namespace TradingTest
                 var equity = repo.GetEquityByName("Stock");
                 Assert.Equal(expectedResult, equity.Id);
 
+            }
+        }
+
+        [Fact]
+        public void ShouldGetNoEquityByNameIFNotExists()
+        {
+            using (var context = new TraderDbContext(this.fixture.option))
+            {
+                EquityRepository repo = new EquityRepository(context);
+                var equity = repo.GetEquityByName("Bonds");
+                Assert.True(equity==null);
+
+            }
+        }
+
+        [Fact]
+        public void ShouldCallDisposeMethodEquityRepo()
+        {
+            using (var context = new TraderDbContext(this.fixture.option))
+            {
+                EquityRepository repo = new EquityRepository(context);
+                repo.Dispose();
+                Mock.VerifyAll();
             }
         }
 

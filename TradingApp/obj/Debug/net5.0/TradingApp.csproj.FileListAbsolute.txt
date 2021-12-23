@@ -7,6 +7,7 @@ C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\TradingA
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\TradingApp.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\ref\TradingApp.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\TradingApp.pdb
+C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll

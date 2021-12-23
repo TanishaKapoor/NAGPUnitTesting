@@ -42,8 +42,7 @@ namespace TradingData.Repository
 
         public void Dispose()
         {
-            _userDbContext.Database.EnsureDeleted();
-            _userDbContext.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
