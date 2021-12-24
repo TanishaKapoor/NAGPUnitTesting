@@ -228,12 +228,11 @@ var assemblies = [
       { "name": "TradingApp.Models.TradingResponse", "rp": "TradingApp_TradingResponse.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingApp.Program", "rp": "TradingApp_Program.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingApp.Startup", "rp": "TradingApp_Startup.html", "cl": 0, "ucl": 34, "cal": 34, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "TradingApp.WeatherForecast", "rp": "TradingApp_WeatherForecast.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "TradingBusiness",
     "classes": [
-      { "name": "TradingBusiness.EquityHandler", "rp": "TradingBusiness_EquityHandler.html", "cl": 61, "ucl": 2, "cal": 63, "tl": 109, "ct": "LineCoverage", "mc": "-", "cb": 16, "tb": 16, "lch": [], "bch": [], "hc": [] },
+      { "name": "TradingBusiness.EquityHandler", "rp": "TradingBusiness_EquityHandler.html", "cl": 62, "ucl": 0, "cal": 62, "tl": 108, "ct": "LineCoverage", "mc": "-", "cb": 16, "tb": 16, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingBusiness.EquityNotOwnedException", "rp": "TradingBusiness_EquityNotOwnedException.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingBusiness.FundHandler", "rp": "TradingBusiness_FundHandler.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 48, "ct": "LineCoverage", "mc": "-", "cb": 4, "tb": 4, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingBusiness.InsufficientEquityQuantityException", "rp": "TradingBusiness_InsufficientEquityQuantityException.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
@@ -242,7 +241,7 @@ var assemblies = [
       { "name": "TradingBusiness.InvalidUserNameException", "rp": "TradingBusiness_InvalidUserNameException.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingBusiness.TradingCloseException", "rp": "TradingBusiness_TradingCloseException.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingBusiness.TradingUtilWrapper", "rp": "TradingBusiness_TradingUtilWrapper.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "TradingBusiness.Util", "rp": "TradingBusiness_Util.html", "cl": 14, "ucl": 1, "cal": 15, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 3, "tb": 6, "lch": [], "bch": [], "hc": [] },
+      { "name": "TradingBusiness.Util", "rp": "TradingBusiness_Util.html", "cl": 14, "ucl": 0, "cal": 14, "tl": 35, "ct": "LineCoverage", "mc": "-", "cb": 5, "tb": 6, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "TradingData",

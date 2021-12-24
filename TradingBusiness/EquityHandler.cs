@@ -7,7 +7,7 @@ using TradingData.Models;
 
 namespace TradingBusiness
 {
-    public  class EquityHandler : IEquityHandler
+    public class EquityHandler : IEquityHandler
     {
         readonly ITradingUtilWrapper _wrapper;
         private readonly IEquityRepository _equityRepository;
@@ -15,8 +15,7 @@ namespace TradingBusiness
         private readonly IUserRepository _userRepository;
         private FundHandler fundHandler;
 
-        public EquityHandler(IEquityRepository equityRepo, IOrderRepository orderRepo, 
-            IUserRepository userRepo, ITradingUtilWrapper wrapper)
+        public EquityHandler(IEquityRepository equityRepo, IOrderRepository orderRepo, IUserRepository userRepo, ITradingUtilWrapper wrapper)
         {
             _equityRepository = equityRepo;
             _orderRepository = orderRepo;
@@ -33,7 +32,7 @@ namespace TradingBusiness
         /// <param name="equityName"></param>
         public List<Orders> BuySellEquity(string userName, string equityName, int quantity)
         {
-            if (_wrapper.IsTradingOpen())
+            if (_wrapper.IsTradingOpen(DateTime.UtcNow))
             {
                 List<Orders> usersOrders = new List<Orders>();
                 Equity equity = _equityRepository.GetEquityByName(equityName);

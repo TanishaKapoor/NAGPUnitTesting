@@ -18,9 +18,9 @@ namespace TradingBusiness
             return Util.CalculateBrokerage(equity, quantity);
         }
 
-        public bool IsTradingOpen()
+        public bool IsTradingOpen(DateTime currTime)
         {
-            return Util.IsTradingOpen();
+            return Util.IsTradingOpen(currTime);
         }
 
         public bool UserHasEnoughFunds(double funds, double requiredFundsForTrading)

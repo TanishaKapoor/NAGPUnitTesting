@@ -60,7 +60,7 @@ namespace TradingTest
             var setup = _fixture.GetNewInstance();
 
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(value: null);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
             var manager = setup.GetEquityHandler();
 
             //Act
@@ -93,7 +93,7 @@ namespace TradingTest
                     FundsAvailable = 10000
                 }
             });
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
 
             var manager = setup.GetEquityHandler();
 
@@ -125,7 +125,7 @@ namespace TradingTest
                     FundsAvailable = 10000
                 }
             });
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(false);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(false);
             var manager = setup.GetEquityHandler();
             string username = "ABC";
             string equityName = "AAPL";
@@ -172,7 +172,7 @@ namespace TradingTest
                     QuantityPurchased = 20
                 }
              });
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
 
 
             var manager = setup.GetEquityHandler();
@@ -222,7 +222,7 @@ namespace TradingTest
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(equity);
             setup._mockUserRepo.Setup((c) => c.GetUsers()).Returns(users);
             setup._mockOrderRepo.Setup((c) => c.GetAllEquityRelatedToAUser(It.IsAny<int>())).Returns(orders);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
 
             var manager = setup.GetEquityHandler();
 
@@ -271,7 +271,7 @@ namespace TradingTest
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(equity);
             setup._mockUserRepo.Setup((c) => c.GetUsers()).Returns(users);
             setup._mockOrderRepo.Setup((c) => c.GetAllEquityRelatedToAUser(It.IsAny<int>())).Returns(orders);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
             setup._wrapper.Setup((c) => c.UserHasEnoughFunds(It.IsAny<int>(), It.IsAny<double>())).Returns(false);
 
 
@@ -322,7 +322,7 @@ namespace TradingTest
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(equity);
             setup._mockUserRepo.Setup((c) => c.GetUsers()).Returns(users);
             setup._mockOrderRepo.Setup((c) => c.GetAllEquityRelatedToAUser(It.IsAny<int>())).Returns(orders);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
             setup._wrapper.Setup((c) => c.UserHasEnoughFunds(It.IsAny<double>(), It.IsAny<double>())).Returns(true);
             setup._mockOrderRepo.Setup((c) => c.AddOrderRelatedToUser(It.IsAny<Orders>())).Callback(() => orders.Add(new Orders
             {
@@ -378,7 +378,7 @@ namespace TradingTest
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(equity);
             setup._mockUserRepo.Setup((c) => c.GetUsers()).Returns(users);
             setup._mockOrderRepo.Setup((c) => c.GetAllEquityRelatedToAUser(It.IsAny<int>())).Returns(orders);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
             setup._wrapper.Setup((c) => c.UserHasEnoughFunds(It.IsAny<double>(), It.IsAny<double>())).Returns(true);
             setup._mockOrderRepo.Setup((c) => c.UpdateExistingOrderForUser(It.IsAny<Orders>(), It.IsAny<int>())).Callback(() => orders.Where(c => c.UserId == 1).First().QuantityPurchased = 30);
 
@@ -429,7 +429,7 @@ namespace TradingTest
             setup._mockEquityRepo.Setup((c) => c.GetEquityByName(It.IsAny<string>())).Returns(equity);
             setup._mockUserRepo.Setup((c) => c.GetUsers()).Returns(users);
             setup._mockOrderRepo.Setup((c) => c.GetAllEquityRelatedToAUser(It.IsAny<int>())).Returns(orders);
-            setup._wrapper.Setup((c) => c.IsTradingOpen()).Returns(true);
+            setup._wrapper.Setup((c) => c.IsTradingOpen(It.IsAny<DateTime>())).Returns(true);
             setup._wrapper.Setup((c) => c.CalculateBrokerage(It.IsAny<Equity>(), It.IsAny<int>())).Returns(20);
             setup._mockOrderRepo.Setup((c) => c.UpdateExistingOrderForUser(It.IsAny<Orders>(), It.IsAny<int>())).Callback(() => orders.Where(c => c.UserId == 1).First().QuantityPurchased-=10);
 

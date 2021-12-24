@@ -11,6 +11,6 @@ namespace TradingBusiness
     {
         double CalculateBrokerage(Equity equity, int quantity);
         bool UserHasEnoughFunds(double funds, double requiredFundsForTrading);
-        bool IsTradingOpen();
+        bool IsTradingOpen(DateTime currTime);
     }
 }

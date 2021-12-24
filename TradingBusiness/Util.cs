@@ -20,11 +20,10 @@ namespace TradingBusiness
             return availableFunds > requiredFundsForTrading;
         }
 
-        public static bool IsTradingOpen()
+        public static bool IsTradingOpen(DateTime currTime)
         {
             TimeSpan start = new TimeSpan(9, 0, 0); //10 o'clock
             TimeSpan end = new TimeSpan(15, 0, 0); //12 o'clock
-            var currTime = DateTime.UtcNow;
             if (currTime.DayOfWeek != DayOfWeek.Saturday && currTime.DayOfWeek != DayOfWeek.Sunday)
             {
                 return ((currTime.TimeOfDay > start) && (currTime.TimeOfDay < end));

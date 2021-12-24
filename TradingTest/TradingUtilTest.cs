@@ -30,7 +30,7 @@ namespace TradingTest
 
 
         [Fact]
-        public void ShouldReturnBrokerageBasedOnQuantity()
+        public void ShouldReturnBrokerageBasedOnQuantityAndPrice()
         {
             var expectedBrokerage = 40;
             TradingUtilWrapper wrapper = new TradingUtilWrapper();
@@ -69,16 +69,17 @@ namespace TradingTest
         public void ShouldCheckFalseForTradingOpen()
         {
             bool answer = false;
-            TimeSpan start = new TimeSpan(9, 0, 0); //10 o'clock
-            TimeSpan end = new TimeSpan(15, 0, 0); //12 o'clock
-            var currTime = DateTime.UtcNow;
-            if (currTime.DayOfWeek != DayOfWeek.Saturday && currTime.DayOfWeek != DayOfWeek.Sunday)
-            {
-                answer =  ((currTime.TimeOfDay > start) && (currTime.TimeOfDay < end));
-            }
-
             TradingUtilWrapper wrapper = new TradingUtilWrapper();
-            bool actual = wrapper.IsTradingOpen();
+            bool actual = wrapper.IsTradingOpen(DateTime.Parse("25-Dec-2021"));
+            Assert.Equal(actual, answer);
+        }
+
+        [Fact]
+        public void ShouldCheckTrueForTradingOpen()
+        {
+            bool answer = true;
+            TradingUtilWrapper wrapper = new TradingUtilWrapper();
+            bool actual = wrapper.IsTradingOpen(DateTime.Parse("23-Dec-2021 09:50:48 AM"));
             Assert.Equal(actual, answer);
         }
     }
