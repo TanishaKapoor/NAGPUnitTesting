@@ -9,4 +9,3 @@ C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\Trading
 C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\ref\TradingData.dll
 C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.pdb
-C:\Users\tanishakapoor\source\repos\Trading\TradingData\obj\Debug\net5.0\TradingData.csproj.AssemblyReference.cache

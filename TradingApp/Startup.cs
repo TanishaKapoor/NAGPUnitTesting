@@ -36,6 +36,7 @@ namespace TradingApp
         {
             services.AddScoped<IEquityHandler, EquityHandler>();
             services.AddScoped<IFundHandler, FundHandler>();
+            services.AddScoped<ITradingUtilWrapper, TradingUtilWrapper>();
             services.AddControllers();
 
             services.AddScoped<IEquityRepository, EquityRepository>();
@@ -45,7 +46,10 @@ namespace TradingApp
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TradingApp", Version = "v1" });
             });
-            services.AddDbContext<TraderDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            string mySqlConnectionStr = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContextPool<TraderDbContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+
+            //services.AddDbContext<TraderDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<TraderDbContext>();
         }
 

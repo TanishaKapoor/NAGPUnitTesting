@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "LgXgGGL450mM0BIDFIosVrNsecknizZcNk8hSim6NvUNcPUY9D8eNrSjYcLYH05aPuHbKALvGlJAtyrD4ziZmg==",
+  "dgSpecHash": "1nEXhzf/UMUo+omT2CrBzAG/Ex39fgZ3CNgSmjki8sHjPFk3YzVbywrWQUTHE2Iq870sMFv5budF2MRtzwsELA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tanishakapoor\\source\\repos\\Trading\\TradingData\\TradingData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0\\microsoft.entityframeworkcore.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0\\microsoft.entityframeworkcore.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0\\microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512",
+    "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.0\\microsoft.entityframeworkcore.relational.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
+    "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\tanishakapoor\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
