@@ -226,8 +226,6 @@ var assemblies = [
     "classes": [
       { "name": "TradingApp.Controllers.Trading", "rp": "TradingApp_Trading.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 83, "ct": "LineCoverage", "mc": "-", "cb": 4, "tb": 4, "lch": [], "bch": [], "hc": [] },
       { "name": "TradingApp.Models.TradingResponse", "rp": "TradingApp_TradingResponse.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "TradingApp.Program", "rp": "TradingApp_Program.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "TradingApp.Startup", "rp": "TradingApp_Startup.html", "cl": 0, "ucl": 34, "cal": 34, "tl": 72, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "TradingBusiness",
